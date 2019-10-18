@@ -4,39 +4,39 @@
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <p>City: {{ weather.list[0].name }} </p>
+            <h4>{{ weather.list[0].name }}, Ireland</h4>
+            <h3>{{ weather.list[0].main.temp }}°C</h3>
           </div>
           <div class="card-body">
-            <p>Description: {{ weather.list[0].weather[0].description}} </p>
-            <p>Current Temperature: {{ weather.list[0].main.temp }} </p>
-            <p>Min Temperature: {{ weather.list[0].main.temp_min }} </p>
-            <p>Max Temperature: {{ weather.list[0].main.temp_max }} </p>
+            <p>{{ weather.list[0].weather[0].description}} </p>
+            <p>Min Temperature: {{ weather.list[0].main.temp_min }}°C</p>
+            <p>Max Temperature: {{ weather.list[0].main.temp_max }}°C</p>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <p>City: {{ weather.list[1].name }} </p>
+            <h4>{{ weather.list[1].name }}, Ireland</h4>
+            <h3>{{ weather.list[1].main.temp }}°C</h3>
           </div>
           <div class="card-body">
-            <p>Description: {{ weather.list[1].weather[0].description}} </p>
-            <p>Current Temperature: {{ weather.list[1].main.temp }} </p>
-            <p>Min Temperature: {{ weather.list[1].main.temp_min }} </p>
-            <p>Max Temperature: {{ weather.list[1].main.temp_max }} </p>
+            <p>{{ weather.list[1].weather[0].description}} </p>
+            <p>Min Temperature: {{ weather.list[1].main.temp_min }}°C</p>
+            <p>Max Temperature: {{ weather.list[1].main.temp_max }}°C</p>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <p>City: {{ weather.list[2].name }} </p>
+            <h4>{{ weather.list[2].name }}, Ireland</h4>
+            <h3>{{ weather.list[2].main.temp }}°C</h3>
           </div>
           <div class="card-body">
-            <p>Description: {{ weather.list[2].weather[0].description}} </p>
-            <p>Current Temperature: {{ weather.list[2].main.temp }} </p>
-            <p>Min Temperature: {{ weather.list[2].main.temp_min }} </p>
-            <p>Max Temperature: {{ weather.list[2].main.temp_max }} </p>
+            <p>{{ weather.list[2].weather[0].description}} </p>
+            <p>Min Temperature: {{ weather.list[2].main.temp_min }}°C</p>
+            <p>Max Temperature: {{ weather.list[2].main.temp_max }}°C</p>
           </div>
         </div>
       </div>
@@ -53,6 +53,9 @@
 <style>
   #weather_item{
     margin-top:20px;
+  }
+  .row {
+    margin-top:50px;
   }
   </style>
 
