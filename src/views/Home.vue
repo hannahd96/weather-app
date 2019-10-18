@@ -1,42 +1,48 @@
 <template>
   <div class="home">
     <div class="row justify-content-center">
+      <h2 style="color:white;">Forecast for Today</h2>
+    </div>
+    <div class="row justify-content-center">
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <h4>{{ weather.list[0].name }}, Ireland</h4>
-            <h3>{{ weather.list[0].main.temp }}°C</h3>
+            <h4 id="temp">{{ weather.list[0].name }}, Ireland</h4>
+            <h3>{{ weather.list[0].main.temp}}°C</h3>
+            <!-- <div id="icon">
+              <img id="weather_icon" src="" alt="Weather Icon">
+            </div> -->
           </div>
           <div class="card-body">
-            <p>{{ weather.list[0].weather[0].description}} </p>
-            <p>Min Temperature: {{ weather.list[0].main.temp_min }}°C</p>
-            <p>Max Temperature: {{ weather.list[0].main.temp_max }}°C</p>
+            <p>{{ weather.list[0].weather[0].main}}</p>
+            <p>Min Temperature: {{ weather.list[0].main.temp_min}}°C</p>
+            <p>Max Temperature: {{ weather.list[0].main.temp_max}}°C</p>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <h4>{{ weather.list[1].name }}, Ireland</h4>
-            <h3>{{ weather.list[1].main.temp }}°C</h3>
+            <h4 id="temp">{{ weather.list[1].name }}, Ireland</h4>
+            <h3>{{ weather.list[1].main.temp}}°C</h3>
           </div>
           <div class="card-body">
-            <p>{{ weather.list[1].weather[0].description}} </p>
-            <p>Min Temperature: {{ weather.list[1].main.temp_min }}°C</p>
-            <p>Max Temperature: {{ weather.list[1].main.temp_max }}°C</p>
+            <p>{{ weather.list[1].weather[0].main}} </p>
+            <p>Min Temperature: {{ weather.list[1].main.temp_min}}°C</p>
+            <p>Max Temperature: {{ weather.list[1].main.temp_max}}°C</p>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-            <h4>{{ weather.list[2].name }}, Ireland</h4>
-            <h3>{{ weather.list[2].main.temp }}°C</h3>
+            <h4 id="temp">{{ weather.list[2].name }}, Ireland</h4>
+            <h3>{{ weather.list[2].main.temp}}°C</h3>
           </div>
           <div class="card-body">
-            <p>{{ weather.list[2].weather[0].description}} </p>
-            <p>Min Temperature: {{ weather.list[2].main.temp_min }}°C</p>
-            <p>Max Temperature: {{ weather.list[2].main.temp_max }}°C</p>
+            <p>{{ weather.list[2].weather[0].main}} </p>
+            <p>Min Temperature: {{ weather.list[2].main.temp_min}}°C</p>
+            <p>Max Temperature: {{ weather.list[2].main.temp_max}}°C</p>
           </div>
         </div>
       </div>
@@ -57,11 +63,18 @@
   .row {
     margin-top:50px;
   }
+  #temp{
+    font-weight: 100;
+  }
   </style>
 
 <script>
 // takes export from API.js and stores it in variable API
 import API from '@/lib/API';
+
+// const iconcode = weather.list[0].weather[0].icon;
+// const iconurl = `http://openweathermap.org/img/w/ ${iconcode} .png`;
+// $('#weather_icon').attr('src', iconurl);
 
 export default {
   name: 'home',
