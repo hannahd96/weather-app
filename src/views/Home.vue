@@ -17,6 +17,13 @@
             <p>{{ weather.list[0].weather[0].main}}</p>
             <p>Min Temperature: {{ weather.list[0].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[0].main.temp_max}}°C</p>
+            <div class="dropdown">
+              <span>More</span>
+              <div class="dropdown-content">
+              <p>Description: {{ weather.list[0].weather[0].description }} </p>
+              <p>Humidity: {{ weather.list[0].main.humidity }}%</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,6 +37,13 @@
             <p>{{ weather.list[1].weather[0].main}} </p>
             <p>Min Temperature: {{ weather.list[1].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[1].main.temp_max}}°C</p>
+            <div class="dropdown">
+              <span>More</span>
+              <div class="dropdown-content">
+              <p>Description: {{ weather.list[1].weather[0].description }} </p>
+              <p>Humidity: {{ weather.list[1].main.humidity }}%</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,6 +57,13 @@
             <p>{{ weather.list[2].weather[0].main}} </p>
             <p>Min Temperature: {{ weather.list[2].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[2].main.temp_max}}°C</p>
+            <div class="dropdown">
+              <span>More</span>
+              <div class="dropdown-content">
+              <p>Description: {{ weather.list[2].weather[0].description }} </p>
+              <p>Humidity: {{ weather.list[2].main.humidity }}%</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -66,6 +87,25 @@
   #temp{
     font-weight: 100;
   }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   </style>
 
 <script>
