@@ -1,20 +1,60 @@
 <template>
   <div class="home">
-    <div class="row">
+    <div class="row justify-content-center">
+      <div class="col-md-3">
         <div class="card">
           <div class="card-header">
-             City: {{ weather.city.name }} <br>
+            <p>City: {{ weather.list[0].name }} </p>
           </div>
           <div class="card-body">
-            Country: {{ weather.city.country }}<br>
-            Timezone: {{ weather.city.timezone }}<br>
-            Population: {{ weather.city.population }}<br>
-            Description: {{ weather.list[0].weather[0].description }}
-            </div>
+            <p>Description: {{ weather.list[0].weather[0].description}} </p>
+            <p>Current Temperature: {{ weather.list[0].main.temp }} </p>
+            <p>Min Temperature: {{ weather.list[0].main.temp_min }} </p>
+            <p>Max Temperature: {{ weather.list[0].main.temp_max }} </p>
+          </div>
         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header">
+            <p>City: {{ weather.list[1].name }} </p>
+          </div>
+          <div class="card-body">
+            <p>Description: {{ weather.list[1].weather[0].description}} </p>
+            <p>Current Temperature: {{ weather.list[1].main.temp }} </p>
+            <p>Min Temperature: {{ weather.list[1].main.temp_min }} </p>
+            <p>Max Temperature: {{ weather.list[1].main.temp_max }} </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header">
+            <p>City: {{ weather.list[2].name }} </p>
+          </div>
+          <div class="card-body">
+            <p>Description: {{ weather.list[2].weather[0].description}} </p>
+            <p>Current Temperature: {{ weather.list[2].main.temp }} </p>
+            <p>Min Temperature: {{ weather.list[2].main.temp_min }} </p>
+            <p>Max Temperature: {{ weather.list[2].main.temp_max }} </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- ideally would have used similar syntax to something below -->
+      <!-- <ul>
+        <li v-for="(weather, index) in weather" :key="weather.id">
+          {{index}}.{{weather.list[0].name}}
+        </li>
+      </ul> -->
   </div>
 </template>
+
+<style>
+  #weather_item{
+    margin-top:20px;
+  }
+  </style>
 
 <script>
 // takes export from API.js and stores it in variable API
