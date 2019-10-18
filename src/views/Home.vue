@@ -128,7 +128,6 @@ export default {
   mounted() {
     // calls API function and get access to result
     API.getWeather().then((result) => {
-      // console.log(result);
       // weather here points up to weather in return statement
       this.weather = result;
     });
