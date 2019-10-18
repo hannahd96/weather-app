@@ -1,5 +1,5 @@
 const API_LOCATION = 'Dublin';
-const API_URL = `http://api.openweathermap.org/data/2.5/forecast?q=${API_LOCATION}&APPID=69022b8514da08aea2fdf64b94633d91`;
+const API_URL = `http://api.openweathermap.org/data/2.5/forecast?q=${API_LOCATION}&cnt=1&APPID=69022b8514da08aea2fdf64b94633d91`;
 
 function getWeather() {
 // make request to API,

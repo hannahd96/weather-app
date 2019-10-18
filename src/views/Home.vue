@@ -1,6 +1,18 @@
 <template>
   <div class="home">
-      <pre>{{ weather }}</pre>
+    <div class="row">
+        <div class="card">
+          <div class="card-header">
+             City: {{ weather.city.name }} <br>
+          </div>
+          <div class="card-body">
+            Country: {{ weather.city.country }}<br>
+            Timezone: {{ weather.city.timezone }}<br>
+            Population: {{ weather.city.population }}<br>
+            Description: {{ weather.list[0].weather[0].description }}
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
