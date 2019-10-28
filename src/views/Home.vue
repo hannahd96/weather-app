@@ -5,7 +5,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-3">
-        <div class="card">
+        <div class="card" id="weather_item">
           <div class="card-header">
             <h4 id="temp">{{ weather.list[0].name }}, Ireland</h4>
             <h3>{{ weather.list[0].main.temp}}°C</h3>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="card">
+        <div class="card" id="weather_item">
           <div class="card-header">
             <h4 id="temp">{{ weather.list[1].name }}, Ireland</h4>
             <h3>{{ weather.list[1].main.temp}}°C</h3>
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="card">
+        <div class="card" id="weather_item" style="margin-bottom:20px;">
           <div class="card-header">
             <h4 id="temp">{{ weather.list[2].name }}, Ireland</h4>
             <h3>{{ weather.list[2].main.temp}}°C</h3>
