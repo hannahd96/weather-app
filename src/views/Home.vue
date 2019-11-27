@@ -9,20 +9,17 @@
           <div class="card-header">
             <h4 id="temp">{{ weather.list[0].name }}, Ireland</h4>
             <h3>{{ weather.list[0].main.temp}}°C</h3>
-            <!-- <div id="icon">
-              <img id="weather_icon" src="" alt="Weather Icon">
-            </div> -->
           </div>
           <div class="card-body">
             <p>{{ weather.list[0].weather[0].main}}</p>
             <p>Min Temperature: {{ weather.list[0].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[0].main.temp_max}}°C</p>
-            <div class="dropdown">
-              <span>More</span>
-              <div class="dropdown-content">
-              <p>Description: {{ weather.list[0].weather[0].description }} </p>
-              <p>Humidity: {{ weather.list[0].main.humidity }}%</p>
-              </div>
+            <div>
+              <b-button v-b-modal.modal-1 variant="info">More</b-button>
+              <b-modal id="modal-1" title="More Info">
+                <p>Description: {{ weather.list[0].weather[0].description }}</p>
+                <p>Humidity: {{ weather.list[0].main.humidity }}%</p>
+              </b-modal>
             </div>
           </div>
         </div>
@@ -37,12 +34,12 @@
             <p>{{ weather.list[1].weather[0].main}} </p>
             <p>Min Temperature: {{ weather.list[1].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[1].main.temp_max}}°C</p>
-            <div class="dropdown">
-              <span>More</span>
-              <div class="dropdown-content">
-              <p>Description: {{ weather.list[1].weather[0].description }} </p>
-              <p>Humidity: {{ weather.list[1].main.humidity }}%</p>
-              </div>
+            <div>
+             <b-button v-b-modal.modal-2 variant="info">More</b-button>
+              <b-modal id="modal-2" title="More Info">
+                <p>Description: {{ weather.list[1].weather[0].description }} </p>
+                <p>Humidity: {{ weather.list[1].main.humidity }}%</p>
+              </b-modal>
             </div>
           </div>
         </div>
@@ -57,11 +54,12 @@
             <p>{{ weather.list[2].weather[0].main}} </p>
             <p>Min Temperature: {{ weather.list[2].main.temp_min}}°C</p>
             <p>Max Temperature: {{ weather.list[2].main.temp_max}}°C</p>
-            <div class="dropdown">
-              <span>More</span>
-              <div class="dropdown-content">
-              <p>Description: {{ weather.list[2].weather[0].description }} </p>
-              <p>Humidity: {{ weather.list[2].main.humidity }}%</p>
+              <div>
+                <b-button v-b-modal.modal-3 variant="info">More</b-button>
+                <b-modal id="modal-3" title="More Info">
+                  <p>Description: {{ weather.list[2].weather[0].description }} </p>
+                  <p>Humidity: {{ weather.list[2].main.humidity }}%</p>
+                </b-modal>
               </div>
             </div>
           </div>
@@ -74,7 +72,6 @@
           {{index}}.{{weather.list[0].name}}
         </li>
       </ul> -->
-  </div>
 </template>
 
 <style>
